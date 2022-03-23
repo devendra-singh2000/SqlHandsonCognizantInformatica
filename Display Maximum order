@@ -1,0 +1,10 @@
+Write a query to display the customer id and the maximum number of orders placed by the customer. Give an alias name as 'MAX_COUNT'. 
+
+(HINT : Retrieve data from Orders table)
+
+
+
+select cust_id,count(order_id) as 'MAX_COUNT'
+from Orders
+group by cust_id
+having MAX_COUNT>1;
