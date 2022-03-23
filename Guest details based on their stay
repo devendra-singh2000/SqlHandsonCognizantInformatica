@@ -1,0 +1,11 @@
+Write a query to display the unique guest id, guest name,
+phone number and address of all the guest who stayed in the resort for more than 5 days. Sort the result based on descending order of guest name.
+
+(HINT: Retrieve data from Guest and Booking tables.Use fromdate and todate)
+
+
+select distinct(g.guestID),g.name,g.phone,g.address
+from Guest g join Booking b 
+on g.guestID=b.guestID
+where b.todate - b.fromdate > 5
+order by g.name desc;
