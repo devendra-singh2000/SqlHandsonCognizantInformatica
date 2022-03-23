@@ -1,0 +1,12 @@
+Write a query to display the town name and number of places
+in each town. Give an alias name as 'NUMBER_OF_PLACES'. Sort the resort based on the town name in descending order.
+
+(HINT: Retrieve data from Town and Pointofinterest tables)
+
+
+
+select t.townname,count(p.pointID) as 'NUMBER_OF_PLACES'
+from Town t inner join PointOfInterest p
+on t.townID=p.townID
+group by p.townID
+order by t.townname desc;
