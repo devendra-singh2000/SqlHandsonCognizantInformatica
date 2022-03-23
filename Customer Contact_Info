@@ -1,0 +1,12 @@
+Write a query to display the Customer id, customer name and
+phone number of the customer. If the phone number is not available, then
+display the email id. Give an alias as Contact_Info.  Sort the result set based on the customer name in ascending order.
+
+(HINT : Retrieve data from Customers table.)
+
+
+
+select Cust_id,Cust_name,
+ifnull(Phone_no,Email_id) as Contact_Info
+from Customers
+order by Cust_name asc;
