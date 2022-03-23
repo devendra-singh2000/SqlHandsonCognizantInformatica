@@ -1,0 +1,10 @@
+Write a query to display the cake name which is not ordered by any customer. Sort the result set based on ascending order of cake name.
+
+(HINT : Retrieve data from Cakes and Order_details records)
+
+select Cake_name
+from Cakes 
+where Cake_id not in (select Cake_id from Order_Details
+where Cake_id is not null
+group by Cake_name)
+order by Cake_name asc;
