@@ -1,0 +1,17 @@
+Write a query to create a Booking table with constraints mentioned.
+
+create table Booking(
+    bookingID int primary key,
+    guestID int,
+    resortID int,
+    cabinID int,
+    fromdate date,
+    todate date,
+    adultCount int,
+    childCount int,
+    petcount int,
+    totalcharge int,
+    foreign key(guestID) references Guest(guestID),
+    foreign key(resortID) references Resort(resortID),
+    foreign key(cabinID) references Cabin(cabinID)
+);
