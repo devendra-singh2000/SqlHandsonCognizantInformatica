@@ -1,0 +1,11 @@
+Write a query to update the revised cabin cost of Cabin id 1 and 3 which have been increased by $1000 from the current rate.
+
+[Sample Data: rate=100]
+
+
+
+
+
+update CabinCost
+set rate=1000+rate
+where cabinID in(1,3);
