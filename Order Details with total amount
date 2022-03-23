@@ -1,0 +1,18 @@
+Write a query to display the order id, customer name, cake name,
+order date, delivery date, price_per_kg, quantity and total amount 
+paid by the customer. Calculate the total amount using price_per_kg 
+and quantity. Give an alias name as 'TOT_AMT'. Sort the result based on descending order of customer name and ascending order of cake_name.
+
+
+HINT:(Retrieve data from Customers, Cakes, Orders and Order_details tables)
+
+
+select od.Order_id,cus.Cust_name,c.Cake_name,o.Order_date,o.Delivery_date,
+c.Price_Per_Kg,od.Quantity,c.Price_Per_Kg * od.Quantity as 'TOT_AMT'
+from Customers cus inner join Orders o
+on cus.Cust_id=o.Cust_id
+inner join Order_Details od 
+on o.Order_id=od.Order_id
+inner join Cakes c 
+on od.Cake_id=c.Cake_id
+order by cus.Cust_name desc, c.Cake_name asc;
