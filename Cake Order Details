@@ -1,0 +1,12 @@
+Write a query to display the cake name,cake flavour 
+and price of all the cake which was ordered less than 5 times. Sort the result based on the ascending order of price.
+
+(HINT : Retrieve data from Cakes and Order_details table)
+
+
+select c.Cake_name,c.Cake_flavour,c.Price_Per_Kg
+from Cakes c inner join Order_Details o 
+on c.Cake_id=o.Cake_id
+group by c.Cake_id
+having count(o.order_id)<5
+order by c.Price_Per_Kg asc;
