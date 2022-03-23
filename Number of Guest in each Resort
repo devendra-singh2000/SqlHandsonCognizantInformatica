@@ -1,0 +1,11 @@
+Write a query to display the resort id, resort name,
+number of guests booked in each resort and star rating. Give an 
+alias name to number of guests booked as 'NO_OF_GUEST'. Sort the result set based on the resort id in the descending order.
+
+(HINT: Retrieve data from Resort and Booking tables)
+
+select r.resortID,r.resortName,count(b.bookingID) as 'NO_OF_GUEST',r.starRating
+from Resort r inner join Booking b 
+on r.resortID=b.resortID
+group by r.resortID
+order by r.resortID desc;
