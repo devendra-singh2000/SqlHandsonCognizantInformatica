@@ -1,0 +1,12 @@
+Write a query to create a Town table with constraints mentioned.
+
+create table Town(
+    townID int primary key,
+    townname varchar(30),
+    state varchar(30),
+    longitude varchar(30),
+    latitude varchar(30),
+    summertemp int,
+    wintertemp int,
+    sealevel int
+);
