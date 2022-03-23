@@ -1,0 +1,9 @@
+Write a query to display the customer details who have a gmail account. Sort the result set based on the customer name in descending order.
+
+(HINT: Retrieve data from Customers Table. Data is Case Sensitive)
+
+
+select * from Customers
+where Email_id like '%@gmail.com'
+order by Cust_name desc;
+
