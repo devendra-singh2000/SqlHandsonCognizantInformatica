@@ -1,0 +1,7 @@
+Write a query to display the Cake flavour and minimum 
+price of the cake. Give an alias name as 'MIN_PRICE'. Sort the result set based on descending order of the cake flavour.
+
+(HINT : Retrieve data from Cakes table)
+select Cake_flavour, min(Price_Per_Kg) as 'MIN_PRICE'
+from Cakes group by Cake_flavour order by Cake_flavour desc;
+
