@@ -1,0 +1,9 @@
+Write a query to  update the total charge and pet count of the guest 
+who stayed in Resort Id 1004 where pet count is increased by 2 and should pay an 
+additional amount of 1500  from the current total charge of the booking.
+
+
+
+update Booking
+set totalcharge=totalcharge + 1500, petcount=petcount + 2
+where resortID = 1004;
