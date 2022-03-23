@@ -1,0 +1,10 @@
+Write a query to display the Cake name that starts with the letter 'C' and is priced more than 800 dollar. Sort the result set in descending order based on price.
+
+(HINT : Retrieve data from Cakes Table. Data is case sensitive) 
+
+
+
+
+select Cake_name from Cakes
+where Cake_name like 'C%' and Price_Per_Kg > 800
+order by Price_Per_Kg desc;
