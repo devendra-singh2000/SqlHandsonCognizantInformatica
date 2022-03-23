@@ -1,0 +1,11 @@
+Write a query to display the cake id, cake name, price,
+quantity and order id of all the cakes available in the cake table. Sort the result based on order id in ascending order and cake id in descending order.
+
+(HINT:Retrieve data from Cakes and Order_details tables)
+
+
+
+select c.Cake_id,c.Cake_name,c.Price_per_Kg,o.Quantity,o.Order_id
+from Cakes c left join Order_Details o
+on c.Cake_id=o.Cake_id
+order by o.Order_id asc,c.Cake_id desc;
