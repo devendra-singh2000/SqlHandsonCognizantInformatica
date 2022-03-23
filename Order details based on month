@@ -1,0 +1,12 @@
+Write a query to display the order id and customer id of all
+the orders placed in the month of 'APRIL'. Sort the result set based on customer id in ascending order and order id in descending order.
+
+(HINT : Retrieve data from Orders table. Data is Case Sensitive)
+
+
+
+
+select Order_id,Cust_id 
+from Orders
+where month(Order_date)=04
+order by Cust_id asc,Order_id desc;
