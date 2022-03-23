@@ -1,0 +1,14 @@
+Write a query to display the booking Id, guest name,
+resort name of the guest who all stayed in the month of April 2019. Sort the result based on descending order of booking id.
+
+(HINT: Retrieve data from  Booking,Guest and Resort Tables. Use fromdate from booking table)
+
+select b.bookingID,g.name,r.resortName
+from Booking b  join Guest g
+on b.guestID=g.guestID
+join Resort r 
+on b.resortID=r.resortID
+where b.fromdate like '2019-04%'
+order by b.bookingID desc;
+
+
