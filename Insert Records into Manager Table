@@ -1,0 +1,4 @@
+Insert the following records into the Manager table.
+
+insert into Manager(managerID,name,address,city,phone)
+values(3,'SWATHI','1 ARYA ROAD',null,'9798611111'),(10,'KARAN','16 HSR LAYOUT','BANGALORE',null),(11,'ARJUN','17 VIVEKANDA STREET','BANGALORE','9798676549');
