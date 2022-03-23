@@ -1,0 +1,12 @@
+Write a query to display the guest name, resort id and date
+of review of all the guests who are from 'CALIFORNIA'. Sort the result set based on the guest name in ascending order.
+
+(HINT: Retrieve data from Guest and review tables. Data is Case Sensitive)
+
+
+select Guest.name,Review.resortID,Review.dateofreview
+from Review left join Guest
+on Guest.guestID=Review.guestID 
+where upper(Guest.country)='CALIFORNIA'
+order by Guest.name;
+
